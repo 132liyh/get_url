@@ -1,5 +1,6 @@
-var get_url = function(url,data){
-    var back_data ={};
+var get_url = function (url, data) {
+    var back_data = {};
+    url = url.substr(url.indexOf('?') + 1, url.length);
     for (let key in data) {
         back_data[data[key]] = '';
 
@@ -10,7 +11,3 @@ var get_url = function(url,data){
     }
     return back_data; 
 }
-
-
- var urldata = get_url(location.search,['id']);
- console.log(urldata);
